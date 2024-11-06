@@ -1,0 +1,23 @@
+Recommendation system
+(Movie streaming app)
+
+
+Problem Definition
+	Consider each arm represents a movie. User interaction with stream is considered as a reward. ( Eg. Clicking on the arm that represents a movie) . 
+
+Approach
+	1. Collect data such as user ratings, watch time and genres preferred. 
+
+	2. Use Epsilon-Greedy algorithm .Two methods are followed here. Take epsilon as a 
+	random number. With probability of epsilon , randomly select an arm that represents a      
+            movie and recommend it to the user for exploring new options. With probability of 1- 
+            epsilon, select an arm using the current knowledge , that is an arm with highest estimated   
+            reward and  recommend it to the user . This is called exploitation. 
+
+	3. Consider every click and positive review for the recommended arm as a positive reward. 
+	Consider ever negative review or low rating for the recommended arm as a negative reward.
+
+	4. This algorithm is efficient as it exploits current knowledge and explores random new 
+            options.
+
+	5. Using epsilon parameter ,  you can control the balance of exploration - exploitation. 
